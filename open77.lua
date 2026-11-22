@@ -18,6 +18,7 @@ permissions {
     "players.life.read", -- server: Open77.players.isDead (a dead player does not rent)
     "input.actions",     -- client: RegisterKeyMapping / Open77.input.keyFor (the desk key)
     "ui.vanilla.map",    -- client: Open77.blips (the desks on the map, Config.blips)
+    "http.request", -- server: Open77.http.get (update check, Config.versionCheck)
 }
 
 shared_script "config.lua"
@@ -26,6 +27,7 @@ shared_script "config.lua"
 server_scripts {
     "server/rental.lua",
     "server/main.lua",
+    "server/version.lua",
 }
 
 client_script "client/main.lua"
